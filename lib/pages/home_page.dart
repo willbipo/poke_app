@@ -30,24 +30,30 @@ class HomeScreen extends StatelessWidget {
                     Navigator.of(context).pushNamed(item.route);
                   },
                   child: Card(
-                    color: Colors.red,
+                    margin: EdgeInsets.all(10),
+                    //color: Colors.red,
                     elevation: 5,
                     shadowColor: Colors.red,
                     child: Center(
                         child: Column(
                       children: [
                         Image(
-                            height: 300,
+                            height: 200,
                             //color: Colors.white,
 
                             fit: BoxFit.fill,
-                            image: AssetImage(item.imageRoute)),
-                        Text(
-                          item.text,
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
+                            image: AssetImage(
+                              item.imageRoute,
+                            )),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            item.text,
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.red,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         )
                       ],
